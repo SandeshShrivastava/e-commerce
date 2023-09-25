@@ -4,12 +4,21 @@
   padding: 0%;
   font-family: 'Arvo', serif;
 font-family: 'Raleway', sans-serif;
+color: rgb(13, 8, 2);
 
 
 }
+#okok:hover{
+  filter: drop-shadow(10px 10px 10px black);
+  border-radius: 10px;
+
+}
+:root{
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: #aeacacee;
+  background-color: #0b0909ee;
 }
 
 nav {
@@ -314,6 +323,7 @@ marquee:hover {
 #upper {
   margin-top: 79px;
   font-style: italic;
+  position: relative;
 }
 
 #upper:hover {

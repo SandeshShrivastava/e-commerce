@@ -13,7 +13,16 @@
 
 <body>
   <div class="container">
-    <nav style="font-size: medium;">
+    <nav >
+      <select name="" id="okok" onchange="chook()">
+       <option value="0">White</option>
+      <option value="1">Grey</option>
+     
+
+          
+
+      </select>
+
       <div class="logo">King</div>
       <li>
         <ul>
@@ -37,7 +46,7 @@
       </li>
       <li>
         <ul>
-          <a href="#about">Contact</a>
+          <a href="/form.html">Contact</a>
         </ul>
       </li>
       <span class="material-symbols-outlined"> shopping_cart </span>
@@ -47,8 +56,9 @@
     <!-- main page -->
     <div id="main">
       <br>
-      <marquee id="upper" scrollAmount="10" width="50%">Welcome to Ower Store...</marquee>
-      <marquee id="upper" scrollAmount="10" width="-50%" direction="Right">Best  <span style="color: blue;">Deal</span> inSide the Store..</marquee>
+      <!-- <marquee id="upper" scrollAmount="10" width="50%">Welcome to Ower Store...</marquee> -->
+      <marquee id="upper" scrollAmount="10" width="-50%" direction="Right">Best <span style="color: blue;">Deal</span>
+        inSide the Store..</marquee>
       <div class="maintext">
         <h2>King Always be a King</h2>
 
@@ -60,11 +70,7 @@
         </p>
         <button>Explore</button>
       </div>
-      <!-- <img class="Img1"
-        src="https://images.unsplash.com/photo-1513094735237-8f2714d57c13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
-        alt=""
-    </div>
-    < cards -->
+
       <div class="trand">
         <div class="head">
           <h1>Trand <span>Men's Were</span></h1>
@@ -195,9 +201,9 @@
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="inp">
-          <input type="text" placeholder="Enter Email">
+          <input type="text" placeholder="Enter Email" id="inp">
           <br>
-          <button id="btn" onclick="((e)=>target.value)">Sign Up</button>
+          <button id="btn" onclick="btn()">Sign Up</button>
         </div>
       </div>
       <div class="footer">

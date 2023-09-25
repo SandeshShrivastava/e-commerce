@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <script>
+    function name() {
+      nam = true;
+      nam = document.getElementById("Name").value;
+      if (nam.length == 0) {
+        alert("Plz Enter your Name");
+        nam = false;
+      }
+      if (nam.length < 6) {
+        alert("Must 6 Letters in your name ");
+        nam = false;
+      }
+      return nam;
+    }
+    function phone() {
+      mob = true;
+      mob = document.getElementById("mob").value;
+      if (mob.length != 10) {
+        alert("Correct your Phone Number");
+        mob = false;
+      }
+
+      return mob;
+    }
+    function age() {
+      uage = true;
+      uage = document.getElementById("age").value;
+      if (uage < 18) {
+        alert("you Plz watch Pogo");
+        uage = false;
+      }
+      if (uage > 25) {
+        alert("you are Over age");
+
+        uage = false;
+      }
+      return uage;
+    }
+    function password() {
+      pass = true;
+      pass = document.getElementById("psd").value;
+      if (pass.length == 0) {
+        alert("Plz Fill the password");
+        pass = false;
+      }
+      if (pass.length <= 8 || pass.length >= 12) {
+        alert("The password must be 8 to 12 Characters");
+        pass = false;
+      }
+      return pass;
+    }
+    function passwordc() {
+      pass = document.getElementById("cpsd").value;
+      pass = true;
+      if (pass.length == 0) {
+        alert("Plz Fill the password");
+        pass = false;
+      }
+      if (pass.length <= 8 || pass.length >= 12) {
+        alert("The password must be 8 to 12 Characters");
+        pass = false;
+      }
+      return pass;
+    }
+    function match() {
+      res = true;
+      pass = document.getElementById("psd").value;
+      cpass = document.getElementById("cpsd").value;
+      if (pass != cpass) {
+        alert("Password can not Match");
+        res = false;
+      }
+
+      return res;
+    }
+    function ok() {
+      var result = false;
+      var ok1 = name();
+      var ok2 = phone();
+      var ok3 = password();
+      var ok4 = age();
+      var ok5 = passwordc();
+      var ok6 = match();
+      if (ok1 && ok2 && ok3 && ok4 && ok5 && ok6){
+          result = true;
+          
+      }
+      return result;
+    }
+    function color(){
+      document.body.style="background-color:black"
+    }
+  </script>
+  <style>
+    #pre {
+      border: 2px solid rgb(8, 6, 6);
+      padding: 20px;
+      margin: 20px;
+      text-align: center;
+      font-size: 30px;
+      color: antiquewhite;
+    }
+    input:hover {
+      padding: 10px;
+      filter: drop-shadow(-5px 5px 5px black);
+    }
+    h1{
+      color: antiquewhite;
+      font-size: 50px;
+    }
+  </style>
+  <body onload="color()">
+    <div class="container">
+      <h1 align="center"> <b>User Information </b></h1><hr>
+      <form action="index.html">
+        <pre id="pre">
+            Enter your Name :       <input type="text" id="Name">&nbsp;
+            Enter your Email:       <input type="text"  id="Email">&nbsp;
+            Enter your phone:       <input type="number"  id="mob">&nbsp;
+            Enter your Age  :       <input type="number" id="age">&nbsp;
+            Enter your password:    <input type="text"  id="psd">&nbsp;
+            Enter Conform password: <input type="text" id="cpsd">&nbsp;
+                                    <input type="submit"  value="save user "  onclick="return ok()">
+         </pre>
+      </form>
+    </div>
+  </body>
+</html>
